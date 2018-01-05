@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>GetDeals</title>
+	<link type="text/css" href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<section id="broadcast">
+		Want to create your own price comparison website?
+		The source code of GetDeals is now open-source and can be downloaded for FREE from our <a href="https://github.com/getdeals/website" target="_blank">GitHub Repository</a>.
+	</section>
+	
+	<header id="page-header">
+
+		<div class="wrapper">
+			<div class="brand-logo">
+				<img src="assets/img/logo.png" alt="GetDeals" />
+			</div>
+			<form name="search-form" class="card search-form">
+				<input type="search" name="q" placeholder="What are you looking for?" />
+				<button type="submit" class="btn-flat">Search</button>
+			</form>
+		</div>
+
+	</header>
+
+	<section id="page-content">
+
+		<div class="wrapper">
+			<div class="results-header">
+
+			</div>
+			<div class="search-results">
+
+			</div>
+			<div class="results-footer">
+				
+			</div>
+		</div>
+
+	</section>
+
+	<footer id="page-footer">
+
+		<!-- <div class="wrapper">
+			<div class="footer-copyright">
+				© 2014 Copyright Text
+				<a class=" right" href="#!">Terms of Service</a>
+				<a class=" right" href="#!">Privacy Policy</a>
+			</div>
+		</div> -->
+
+	</footer>
+
+	<script type="text/html" id="api-state-all">
+		<a href="/search?category=mobiles" class="grey btn btn-large">View All Mobiles</a>
+	</script>
+
+	<script type="text/html" id="api-state-more">
+		<button class="grey btn btn-large">Load More Results</button>
+	</script>
+
+	<script type="text/html" id="api-state-load">
+		<div class="spinner"><i class="fas fa-spinner fa-spin"></i></div>
+	</script>
+
+	<script type="text/html" id="api-state-last">
+		<button class="grey btn btn-large" disabled>That's All We Could Find</button>
+	</script>
+
+	<script type="text/html" id="api-state-none">
+		<div class="no-results"><p class="lead">No Products Found</p>
+		<p>Select a category or search for the product you are looking for.</p></div>
+	</script>
+
+	<script type="text/html" id="api-state-error">
+		<div class="no-results"><p class="lead">Something Is Wrong</p>
+		<p>We couldn't complete your request. Please refresh the page and try again.</p></div>
+	</script>
+
+	<script type="text/html" id="product-card">
+		<div class="card">
+			<div class="card-image">
+				<img src="assets/img/office.jpg" alt="" />
+			</div>
+			<div class="card-content">
+				<span class="card-title">Name of The Best Product In The World</span>
+				<p class="card-store">Store Name</p>
+			</div>
+			<div class="card-content">
+				<p class="card-price-info"><span class="list-price">&#8377;102000.00</span><span class="discount-badge">10% OFF</span></p>
+				<p class="card-price-info"><span class="sale-price">&#8377;90000.00</span></p>
+			</div>
+			<div class="card-action">
+				<a href="#">Buy Now</a>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/materialize.js"></script>
+	<script type="text/javascript" src="assets/js/mustache.js"></script>
+	<script type="text/javascript" src="assets/js/unserialize.js"></script>
+	<script type="text/javascript" src="assets/js/masonry.js"></script>
+	<script type="text/javascript" src="assets/js/imagesloaded.js"></script>
+	<script type="text/javascript" src="assets/js/trunk8.js"></script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>

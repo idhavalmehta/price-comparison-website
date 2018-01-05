@@ -1,0 +1,161 @@
+
+// materialize
+@import "materialize/materialize";
+
+// custom styles
+
+body {
+	background: #f7f7f7;
+	overflow-y: scroll;
+}
+
+#broadcast {
+	padding: 1rem;
+	color: color("shades", "white");
+	background: color("grey", "darken-3");
+
+	a {
+		color: color("shades", "white");
+		text-decoration: underline;
+	}
+
+}
+
+#page-header {
+
+	.wrapper {
+		max-width: 648px;
+		margin: 8%;
+	}
+
+	.brand-logo {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-bottom: 1.25rem;
+
+		img {
+			max-width: 60%;
+			max-height: 75px;
+			display: block;
+		}
+
+	}
+
+	.search-form {
+		padding: 2px 16px;
+		margin-top: 0;
+
+		input {
+			font-size: 1.125rem;
+			font-weight: 500;
+			border: none !important;
+			box-shadow: none !important;
+			margin-bottom: 0;
+		}
+
+		button {
+			height: 49px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			display: none;
+		}
+
+	}
+
+}
+
+#page-content {
+
+	.wrapper {
+		margin: 16px;
+		margin-right: 0;
+	}
+
+	.search-results {
+
+		.card {
+			margin: 0 0 16px;
+			float: left;
+		}
+
+		.card-image {
+			
+		}
+
+		.card-content {
+			padding: 1rem;
+		}
+
+		.card-title {
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 1.5;
+			margin-bottom: 5px;
+		}
+
+		.card-price-info {
+			line-height: 1;
+			margin-bottom: 8px;
+
+			.list-price {
+				color: color("grey", "lighten-1");
+				text-decoration: line-through;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.sale-price {
+				//color: $primary-color;
+				font-size: 20px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.discount-badge {
+				color: #fff;
+				font-size: 12px;
+				line-height: 1;
+				padding: 3.5px 5px;
+				background: color("green", "base");
+				border-radius: 2px;
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 10px;
+			}
+
+		}
+
+		.card-action {
+			padding: 0;
+			border-top: none;
+			margin-left: -1px;
+			margin-right: -1px;
+
+			a {
+				color: #fff;
+				line-height: 1;
+				text-align: center;
+				padding: 14px;
+				background: $primary-color;
+				display: block;
+				margin: 0;
+			}
+
+		}
+
+	}
+
+	.results-footer {
+		text-align: center;
+		padding: 1rem;
+		margin-top: 2rem;
+
+		button {
+			width: 50%;
+			max-width: 300px;	
+		}
+
+	}
+
+}
