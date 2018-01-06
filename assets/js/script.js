@@ -1,40 +1,17 @@
 
-var template = $('#product-card').html();
-Mustache.parse(template); // optional, speeds up future uses
-var rendered = Mustache.render(template, {});
-
 $(document).ready(function(){
-	
-	var grid = '#page-content .search-results';
+	var parameters = window.location.search;
+	parameters = $.unserialize(parameters.substring(1));
+	$('#search-form').unserialize(parameters); // update form values
+	getdeals.templates.parseAll(); // makes mustache faster
+	if (parameters.q) { getdeals.api.getResults(); }
+});
 
-	var gridWidth = $(grid).innerWidth();
-	var gutter = 16;
-	var n = Math.floor(gridWidth / 220);
+$(window).resize(function() {
+	getdeals.masonry.reInitialize();
+} );
 
-	console.log(gridWidth);
-	
-	var columnWidth = (gridWidth) / n;
-	columnWidth = columnWidth - gutter;
-	var itemWidth = columnWidth;
-
-	console.log(columnWidth);
-	console.log(itemWidth);
-
-	for (var i=0;i<12;i++){ $(grid).append(rendered); }
-	$(grid).find('.card').width(itemWidth);
-	$(grid).find('.card-title').trunk8({lines: 2});
-
-	// init Masonry
-	var $grid = $(grid).masonry({
-		itemSelector: '.card',
-		columnWidth: columnWidth,
-		//percentPosition: true,
-		gutter: gutter,
-	});
-
-	// layout Masonry after each image loads
-	$grid.imagesLoaded().progress( function() {
-		$grid.masonry('layout');
-	});
-
+$('#page-content').on('click', '#load-more-btn', function(e){
+	getdeals.api.state('load');
+	getdeals.api.getNextPage();
 });

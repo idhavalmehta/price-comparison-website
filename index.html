@@ -8,24 +8,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>GetDeals</title>
 	<link type="text/css" href="assets/css/style.css" rel="stylesheet" />
+	<meta name="GD-API-Email" content="" />
+	<meta name="GD-API-Token" content="" />
 </head>
 
 <body>
-
-	<section id="broadcast">
-		Want to create your own price comparison website?
-		The source code of GetDeals is now open-source and can be downloaded for FREE from our <a href="https://github.com/getdeals/website" target="_blank">GitHub Repository</a>.
-	</section>
 	
 	<header id="page-header">
 
 		<div class="wrapper">
 			<div class="brand-logo">
-				<img src="assets/img/logo.png" alt="GetDeals" />
+				<a href="/" title="GetDeals"><img src="assets/img/logo.png" alt="GetDeals" /></a>
 			</div>
-			<form name="search-form" class="card search-form">
-				<input type="search" name="q" placeholder="What are you looking for?" />
-				<button type="submit" class="btn-flat">Search</button>
+			<form name="search-form" id="search-form" class="card search-form">
+				<input type="search" name="q" placeholder="What are you looking for?" form="search-form" required="required" />
+				<input type="hidden" name="category" value="all" form="filter-category" />
+				<input type="hidden" name="page" value="1" form="pagination" />
+				<button type="submit"><i class="fas fa-search"></i></button>
 			</form>
 		</div>
 
@@ -34,15 +33,9 @@
 	<section id="page-content">
 
 		<div class="wrapper">
-			<div class="results-header">
-
-			</div>
-			<div class="search-results">
-
-			</div>
-			<div class="results-footer">
-				
-			</div>
+			<div class="results-header"></div>
+			<div class="search-results"></div>
+			<div class="results-footer"></div>
 		</div>
 
 	</section>
@@ -50,10 +43,12 @@
 	<footer id="page-footer">
 
 		<!-- <div class="wrapper">
+			<div class="footer-navbar">
+			</div>
 			<div class="footer-copyright">
-				© 2014 Copyright Text
-				<a class=" right" href="#!">Terms of Service</a>
-				<a class=" right" href="#!">Privacy Policy</a>
+				© 2018 GetDeals. All Rights Reserved.
+				<a href="terms" class="right">Terms of Service</a>
+				<a href="privacy" class="right">Privacy Policy</a>
 			</div>
 		</div> -->
 
@@ -64,11 +59,7 @@
 	</script>
 
 	<script type="text/html" id="api-state-more">
-		<button class="grey btn btn-large">Load More Results</button>
-	</script>
-
-	<script type="text/html" id="api-state-load">
-		<div class="spinner"><i class="fas fa-spinner fa-spin"></i></div>
+		<button id="load-more-btn" class="grey btn btn-large">Load More Results</button>
 	</script>
 
 	<script type="text/html" id="api-state-last">
@@ -85,13 +76,23 @@
 		<p>We couldn't complete your request. Please refresh the page and try again.</p></div>
 	</script>
 
+	<script type="text/html" id="api-state-load">
+		<div class="preloader-wrapper active">
+			<div class="spinner-layer">
+				<div class="circle-clipper left"><div class="circle"></div></div>
+				<div class="gap-patch"><div class="circle"></div></div>
+				<div class="circle-clipper right"><div class="circle"></div></div>
+			</div>
+		</div>
+	</script>
+
 	<script type="text/html" id="product-card">
-		<div class="card">
+		<div class="card product-card">
 			<div class="card-image">
-				<img src="assets/img/office.jpg" alt="" />
+				<img src="{{image}}" alt="" />
 			</div>
 			<div class="card-content">
-				<span class="card-title">Name of The Best Product In The World</span>
+				<span class="card-title">Here Comes The Name Of The Best Product In The World</span>
 				<p class="card-store">Store Name</p>
 			</div>
 			<div class="card-content">
@@ -111,6 +112,7 @@
 	<script type="text/javascript" src="assets/js/masonry.js"></script>
 	<script type="text/javascript" src="assets/js/imagesloaded.js"></script>
 	<script type="text/javascript" src="assets/js/trunk8.js"></script>
+	<script type="text/javascript" src="assets/js/getdeals.js"></script>
 	<script type="text/javascript" src="assets/js/script.js"></script>
 
 </body>
