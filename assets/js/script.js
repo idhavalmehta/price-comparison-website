@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+	$('.modal').modal(); // materializecss
 	var parameters = window.location.search;
 	parameters = $.unserialize(parameters.substring(1));
 	$('#search-form').unserialize(parameters); // update form values

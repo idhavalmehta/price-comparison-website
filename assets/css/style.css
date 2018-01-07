@@ -1961,6 +1961,14 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto; }
+
 ul:not(.browser-default) {
   padding-left: 0;
   list-style-type: none; }
@@ -1982,7 +1990,7 @@ a {
 .z-depth-0 {
   box-shadow: none !important; }
 
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+.z-depth-1, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover {
@@ -2498,11 +2506,6 @@ nav ul a span.badge {
 
 .side-nav span.badge {
   margin-top: calc(24px - 11px); }
-
-/* This is needed for some mobile phones to display the Google Icon font properly */
-.material-icons {
-  text-rendering: optimizeLegibility;
-  font-feature-settings: 'liga'; }
 
 .container {
   margin: 0 auto;
@@ -3080,142 +3083,6 @@ nav ul a span.badge {
       .row .col.push-xl12 {
         left: 100%; } }
 
-nav {
-  color: #fff;
-  background-color: #e74c3c;
-  width: 100%;
-  height: 56px;
-  line-height: 56px; }
-  nav.nav-extended {
-    height: auto; }
-    nav.nav-extended .nav-wrapper {
-      min-height: 56px;
-      height: auto; }
-    nav.nav-extended .nav-content {
-      position: relative;
-      line-height: normal; }
-  nav a {
-    color: #fff; }
-  nav i,
-  nav [class^="mdi-"], nav [class*="mdi-"],
-  nav i.material-icons {
-    display: block;
-    font-size: 24px;
-    height: 56px;
-    line-height: 56px; }
-  nav .nav-wrapper {
-    position: relative;
-    height: 100%; }
-  @media only screen and (min-width: 993px) {
-    nav a.button-collapse {
-      display: none; } }
-  nav .button-collapse {
-    float: left;
-    position: relative;
-    z-index: 1;
-    height: 56px;
-    margin: 0 18px; }
-    nav .button-collapse i {
-      height: 56px;
-      line-height: 56px; }
-  nav .brand-logo {
-    position: absolute;
-    color: #fff;
-    display: inline-block;
-    font-size: 2.1rem;
-    padding: 0; }
-    nav .brand-logo.center {
-      left: 50%;
-      transform: translateX(-50%); }
-    @media only screen and (max-width: 992px) {
-      nav .brand-logo {
-        left: 50%;
-        transform: translateX(-50%); }
-        nav .brand-logo.left, nav .brand-logo.right {
-          padding: 0;
-          transform: none; }
-        nav .brand-logo.left {
-          left: 0.5rem; }
-        nav .brand-logo.right {
-          right: 0.5rem;
-          left: auto; } }
-    nav .brand-logo.right {
-      right: 0.5rem;
-      padding: 0; }
-    nav .brand-logo i,
-    nav .brand-logo [class^="mdi-"], nav .brand-logo [class*="mdi-"],
-    nav .brand-logo i.material-icons {
-      float: left;
-      margin-right: 15px; }
-  nav .nav-title {
-    display: inline-block;
-    font-size: 32px;
-    padding: 28px 0; }
-  nav ul {
-    margin: 0; }
-    nav ul li {
-      transition: background-color .3s;
-      float: left;
-      padding: 0; }
-      nav ul li.active {
-        background-color: rgba(0, 0, 0, 0.1); }
-    nav ul a {
-      transition: background-color .3s;
-      font-size: 1rem;
-      color: #fff;
-      display: block;
-      padding: 0 15px;
-      cursor: pointer; }
-      nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
-        margin-top: -2px;
-        margin-left: 15px;
-        margin-right: 15px; }
-        nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-flat > .material-icons, nav ul a.btn-floating > .material-icons {
-          height: inherit;
-          line-height: inherit; }
-      nav ul a:hover {
-        background-color: rgba(0, 0, 0, 0.1); }
-    nav ul.left {
-      float: left; }
-  nav form {
-    height: 100%; }
-  nav .input-field {
-    margin: 0;
-    height: 100%; }
-    nav .input-field input {
-      height: 100%;
-      font-size: 1.2rem;
-      border: none;
-      padding-left: 2rem; }
-      nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .input-field input[type=password]:valid, nav .input-field input[type=email]:valid, nav .input-field input[type=url]:valid, nav .input-field input[type=date]:valid {
-        border: none;
-        box-shadow: none; }
-    nav .input-field label {
-      top: 0;
-      left: 0; }
-      nav .input-field label i {
-        color: rgba(255, 255, 255, 0.7);
-        transition: color .3s; }
-      nav .input-field label.active i {
-        color: #fff; }
-
-.navbar-fixed {
-  position: relative;
-  height: 56px;
-  z-index: 997; }
-  .navbar-fixed nav {
-    position: fixed; }
-
-@media only screen and (min-width: 601px) {
-  nav.nav-extended .nav-wrapper {
-    min-height: 64px; }
-
-  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-    height: 64px;
-    line-height: 64px; }
-
-  .navbar-fixed {
-    height: 64px; } }
 @font-face {
   font-family: "Roboto";
   src: local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/roboto/Roboto-Thin.woff") format("woff");
@@ -3716,18 +3583,18 @@ small {
 
 .btn:focus, .btn-large:focus,
 .btn-floating:focus {
-  background-color: #1d7d74; }
+  background-color: #d62c1a; }
 
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #e74c3c;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
   cursor: pointer; }
   .btn:hover, .btn-large:hover {
-    background-color: #2bbbad; }
+    background-color: #ea6153; }
 
 .btn-floating {
   display: inline-block;
@@ -3739,13 +3606,13 @@ small {
   height: 40px;
   line-height: 40px;
   padding: 0;
-  background-color: #26a69a;
+  background-color: #e74c3c;
   border-radius: 50%;
   transition: .3s;
   cursor: pointer;
   vertical-align: middle; }
   .btn-floating:hover {
-    background-color: #26a69a; }
+    background-color: #e74c3c; }
   .btn-floating:before {
     border-radius: 0; }
   .btn-floating.btn-large {
@@ -3844,7 +3711,7 @@ button.btn-floating {
     z-index: -1;
     width: 40px;
     height: 40px;
-    background-color: #26a69a;
+    background-color: #e74c3c;
     border-radius: 50%;
     transform: scale(0); }
 
@@ -3864,8 +3731,8 @@ button.btn-floating {
     cursor: default; }
 
 .btn-large {
-  height: 49px;
-  line-height: 49px; }
+  height: 42px;
+  line-height: 42px; }
   .btn-large i {
     font-size: 1.6rem; }
 
@@ -4250,7 +4117,7 @@ select:focus {
 
 button:focus {
   outline: none;
-  background-color: #2ab7a9; }
+  background-color: #e95d4e; }
 
 label {
   font-size: 0.8rem;
@@ -5354,9 +5221,9 @@ input[type=range]:focus::-ms-fill-upper {
     .side-nav li > a.btn-flat {
       color: #343434; }
     .side-nav li > a.btn:hover, .side-nav li > a.btn-large:hover, .side-nav li > a.btn-large:hover {
-      background-color: #2bbbad; }
+      background-color: #ea6153; }
     .side-nav li > a.btn-floating:hover {
-      background-color: #26a69a; }
+      background-color: #e74c3c; }
     .side-nav li > a > i, .side-nav li > a > [class^="mdi-"], .side-nav li > a li > a > [class*="mdi-"], .side-nav li > a > i.material-icons {
       float: left;
       height: 48px;
@@ -9441,22 +9308,34 @@ body {
   background: #f7f7f7;
   overflow-y: scroll; }
 
-#page-header .wrapper {
-  max-width: 698px;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin: 12% auto; }
-#page-header .brand-logo {
-  text-align: center;
-  margin-bottom: 1.5rem; }
-  #page-header .brand-logo img {
-    height: 90px;
-    max-width: 100%;
-    vertical-align: middle; }
-#page-header .search-form {
-  padding: 2px 16px;
-  padding-right: 52px;
-  margin-top: 0; }
+.modal h4 {
+  font-size: 1.6rem; }
+
+#page-header {
+  padding: 7rem 1rem 2rem; }
+  @media only screen and (min-width: 601px) {
+    #page-header {
+      padding: 7rem 1rem 4rem; } }
+  @media only screen and (min-width: 993px) {
+    #page-header {
+      padding: 12% 1rem 4rem; } }
+  #page-header .wrapper {
+    max-width: 698px;
+    text-align: center;
+    margin: 0 auto; }
+  #page-header .brand-logo {
+    margin-bottom: 1.25rem; }
+    @media only screen and (min-width: 601px) {
+      #page-header .brand-logo {
+        margin-bottom: 1.6rem; } }
+    #page-header .brand-logo img {
+      max-height: 6rem;
+      max-width: 60%;
+      vertical-align: middle; }
+  #page-header .search-form .card {
+    margin: 0;
+    padding: .0625rem 1rem;
+    padding-right: 3.75rem; }
   #page-header .search-form input {
     font-size: 1.125rem;
     font-weight: 500;
@@ -9464,76 +9343,155 @@ body {
     box-shadow: none !important;
     margin-bottom: 0; }
   #page-header .search-form button {
-    color: #616161;
-    height: 49px;
+    color: #9e9e9e;
+    height: 100%;
     position: absolute;
     right: 0;
     top: 0;
-    padding: 0 1.125rem;
+    padding: 0 .98rem;
     background: none;
     border: none; }
     #page-header .search-form button .fa-search {
-      font-size: 1.5rem;
-      line-height: 49px; }
+      font-size: 1.75rem;
+      position: relative;
+      top: 1.5px; }
 
-#page-content .wrapper {
-  padding: 0;
-  margin: 0; }
-#page-content .search-results {
-  margin-left: 16px;
-  margin-right: 0; }
-  #page-content .search-results .card {
-    margin: 0 0 16px;
-    float: left; }
-  #page-content .search-results .card-image {
-    padding: 1rem;
-    padding-bottom: 0; }
-  #page-content .search-results .card-content {
-    padding: 1rem; }
-  #page-content .search-results .card-title {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 5px; }
-  #page-content .search-results .card-price-info {
-    line-height: 1;
-    margin-bottom: 8px; }
-    #page-content .search-results .card-price-info .list-price {
-      color: #bdbdbd;
-      text-decoration: line-through;
-      display: inline-block;
-      vertical-align: middle; }
-    #page-content .search-results .card-price-info .sale-price {
+#page-content {
+  padding: 2rem 1rem 5rem; }
+  #page-content .search-results {
+    padding-top: 1rem;
+    margin-bottom: 2rem; }
+    #page-content .search-results .card {
+      margin: 0 0 16px;
+      float: left; }
+    #page-content .search-results .card-image {
+      padding: 1rem;
+      padding-bottom: 0; }
+    #page-content .search-results .card-content {
+      padding: 1rem; }
+    #page-content .search-results .card-title {
       font-size: 20px;
-      display: inline-block;
-      vertical-align: middle; }
-    #page-content .search-results .card-price-info .discount-badge {
-      color: #fff;
-      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 5px; }
+    #page-content .search-results .card-price-info {
       line-height: 1;
-      padding: 3.5px 5px;
-      background: #4CAF50;
-      border-radius: 2px;
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 10px; }
-  #page-content .search-results .card-action {
-    padding: 0;
-    border-top: none;
-    margin-left: -1px;
-    margin-right: -1px; }
-    #page-content .search-results .card-action a {
-      color: #fff;
-      line-height: 1;
-      text-align: center;
-      padding: 15px;
-      background: #e74c3c;
-      display: block;
-      margin: 0; }
-#page-content .results-footer {
-  text-align: center;
+      margin-bottom: 8px; }
+      #page-content .search-results .card-price-info .list-price {
+        color: #bdbdbd;
+        text-decoration: line-through;
+        display: inline-block;
+        vertical-align: middle; }
+      #page-content .search-results .card-price-info .sale-price {
+        font-size: 20px;
+        display: inline-block;
+        vertical-align: middle; }
+      #page-content .search-results .card-price-info .discount-badge {
+        color: #fff;
+        font-size: 12px;
+        line-height: 1;
+        padding: 3.5px 5px;
+        background: #4CAF50;
+        border-radius: 2px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px; }
+    #page-content .search-results .card-action {
+      padding: 0;
+      border-top: none;
+      margin-left: -1px;
+      margin-right: -1px; }
+      #page-content .search-results .card-action a {
+        color: #fff;
+        line-height: 1;
+        text-align: center;
+        padding: 15px;
+        background: #e74c3c;
+        display: block;
+        margin: 0; }
+  #page-content .results-footer {
+    text-align: center;
+    margin-top: 3rem; }
+    #page-content .results-footer button {
+      width: 100%;
+      max-width: 300px; }
+
+#page-footer {
   padding: 1rem;
-  margin-top: 2rem; }
-  #page-content .results-footer button {
-    width: 100%;
-    max-width: 300px; }
+  padding-bottom: .75rem;
+  	/*.footer-navbar,
+  	.social-networks {
+  		color: color("grey", "base");
+  		vertical-align: middle;
+  		display: inline-block;
+  	}
+  
+  	a {
+  		margin-left: .2rem;
+  		margin-right: .2rem;
+  
+  		
+  
+  	}
+  
+  	.separator {
+  		font-size: 1.25rem;
+  		margin: 0 .2rem;
+  
+  		@media only screen and (max-width : 600px) {
+  			display: none;
+  		}
+  
+  	}
+  
+  	.footer-navbar {
+  
+  		@media only screen and (max-width : 600px) {
+  			margin-bottom: .5rem;
+  		}
+  
+  	}
+  
+  	.social-networks {
+  		font-size: $height-large;
+  	
+  		a { margin: 0; }
+  
+  		@media only screen and (min-width : 601px) {
+  			float: right;
+  		}
+  
+  	}*/ }
+  @media only screen and (max-width: 600px) {
+    #page-footer {
+      background: #eee; } }
+  #page-footer .wrapper:after {
+    content: '';
+    clear: both;
+    display: block; }
+  #page-footer .footer-navbar {
+    display: none; }
+    #page-footer .footer-navbar span {
+      display: none; }
+    @media only screen and (min-width: 601px) {
+      #page-footer .footer-navbar {
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: .8rem; }
+        #page-footer .footer-navbar a, #page-footer .footer-navbar span {
+          color: #9e9e9e;
+          font-weight: 500;
+          display: inline-block;
+          margin-right: .5rem; } }
+  #page-footer .social-networks {
+    line-height: 1;
+    float: right; }
+    #page-footer .social-networks i {
+      display: block; }
+    #page-footer .social-networks a {
+      color: #9e9e9e;
+      line-height: 1;
+      font-size: 2.1rem;
+      display: inline-block;
+      margin-left: .0625rem; }

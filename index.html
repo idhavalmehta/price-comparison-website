@@ -13,77 +13,82 @@
 </head>
 
 <body>
-	
+
 	<header id="page-header">
 
 		<div class="wrapper">
 			<div class="brand-logo">
 				<a href="/" title="GetDeals"><img src="assets/img/logo.png" alt="GetDeals" /></a>
 			</div>
-			<form name="search-form" id="search-form" class="card search-form">
-				<input type="search" name="q" placeholder="What are you looking for?" form="search-form" required="required" />
-				<input type="hidden" name="category" value="all" form="filter-category" />
-				<input type="hidden" name="page" value="1" form="pagination" />
-				<button type="submit"><i class="fas fa-search"></i></button>
-			</form>
+			<div class="search-form">
+				<form name="search-form" id="search-form" class="card search-form">
+					<input type="search" name="q" placeholder="What are you looking for?" form="search-form" required="required" />
+					<input type="hidden" name="category" value="all" form="filter-category" />
+					<input type="hidden" name="page" value="1" form="pagination" />
+					<button type="submit"><i class="fas fa-search"></i></button>
+				</form>
+			</div>
 		</div>
 
 	</header>
 
-	<section id="page-content">
-
-		<div class="wrapper">
+	<main id="page-content">
+		
+		<section id="index-page" class="wrapper">
 			<div class="results-header"></div>
 			<div class="search-results"></div>
 			<div class="results-footer"></div>
-		</div>
+		</section>
 
-	</section>
+		<section id="js-content" class="wrapper">
+			<div id="about-getdeals" class="modal modal-fixed-footer">
+				<div class="modal-content">
+					<h4>About GetDeals</h4>
+					<p>GetDeals is India's #1 open-source search engine and price comparison website for e-commerce.</p>
+					<p>With so many e-commerce websites already available and new ones coming up every now and then, how do you know that you are getting the best deal online? You don't visit every single one of those e-commerce websites, search for your product, note down the price and then decide where to buy from, right? That is so not smart!</p>
+					<p>Smart work is you searching for your product on GetDeals instead of visiting multiple e-commerce websites. GetDeals will, on your behalf, search get you the current price of your product from all major e-commerce websites like Amazon.in, Flipkart and Snapdeal for easy comparison within seconds. And the best part, it works for all products and all categories making our product catalogue the largest of all price comparison websites out there.</p>
+					<p>By using GetDeals everytime you shop online, you not only save both time and moeny, but are sure that you have got the best deal online as well.</p>
+				</div>
+				<div class="modal-footer">
+					<button class="modal-action modal-close btn-flat">Close</button>
+				</div>
+			</div>
+		</section>
+
+	</main>
 
 	<footer id="page-footer">
 
-		<!-- <div class="wrapper">
+		<div class="wrapper">
 			<div class="footer-navbar">
+				<a href="#about-getdeals" class="modal-trigger">About GetDeals</a>
+				<span class="separator">&bull;</span>
+				<a href="privacy">Privacy Policy</a>
+				<a href="terms">Terms of Service</a>
 			</div>
-			<div class="footer-copyright">
-				© 2018 GetDeals. All Rights Reserved.
-				<a href="terms" class="right">Terms of Service</a>
-				<a href="privacy" class="right">Privacy Policy</a>
+			<div class="social-networks">
+				<a href="https://www.facebook.com/getdealscoin" target="_blank"><i class="fab fa-facebook-square"></i></a>
+				<a href="https://www.twitter.com/getdealscoin" target="_blank"><i class="fab fa-twitter-square"></i></a>
+				<a href="https://www.linkedin.com/company/getdeals" target="_blank"><i class="fab fa-linkedin"></i></a>
 			</div>
-		</div> -->
+		</div>
 
 	</footer>
 
-	<script type="text/html" id="api-state-all">
-		<a href="/search?category=mobiles" class="grey btn btn-large">View All Mobiles</a>
-	</script>
-
 	<script type="text/html" id="api-state-more">
-		<button id="load-more-btn" class="grey btn btn-large">Load More Results</button>
+		<button id="load-more-btn" class="btn btn-large">Load More Results</button>
 	</script>
 
 	<script type="text/html" id="api-state-last">
-		<button class="grey btn btn-large" disabled>That's All We Could Find</button>
-	</script>
-
-	<script type="text/html" id="api-state-none">
-		<div class="no-results"><p class="lead">No Products Found</p>
-		<p>Select a category or search for the product you are looking for.</p></div>
-	</script>
-
-	<script type="text/html" id="api-state-error">
-		<div class="no-results"><p class="lead">Something Is Wrong</p>
-		<p>We couldn't complete your request. Please refresh the page and try again.</p></div>
+		<button class="btn" disabled>That's All We Could Find</button>
 	</script>
 
 	<script type="text/html" id="api-state-load">
-		<div class="preloader-wrapper active">
-			<div class="spinner-layer">
-				<div class="circle-clipper left"><div class="circle"></div></div>
-				<div class="gap-patch"><div class="circle"></div></div>
-				<div class="circle-clipper right"><div class="circle"></div></div>
-			</div>
-		</div>
+		<div class="preloader-wrapper active"><div class="spinner-layer">
+			<div class="circle-clipper left"><div class="circle"></div></div>
+			<div class="gap-patch"><div class="circle"></div></div>
+			<div class="circle-clipper right"><div class="circle"></div></div>
+		</div></div>
 	</script>
 
 	<script type="text/html" id="product-card">

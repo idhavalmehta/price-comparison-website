@@ -21,9 +21,8 @@
 			/*private methods*/
 
 			var serialize = function() {
-				var all = forms.join(','),
-				parameters = $(all).serialize();
-				return parameters.replace(/&?[^=&]+=(&|$)/g,'');
+				var all = forms.join(',');
+				return $(all).serialize().replace(/&?[^=&]+=(&|$)/g,'');
 			};
 
 			/*public data / methods*/
@@ -31,7 +30,15 @@
 			return {
 
 				state: function(state) {
-					var html = getdeals.template.render('api-state-' + state);
+					var html = '';
+					switch (state) {
+						case 'none':
+							Materialize.toast('No products found. Please try a different search query.', 3000);break;
+						case 'error':
+							Materialize.toast('Error! Please refresh the page and try again.', 3000);break;
+						default:
+							var html = getdeals.template.render('api-state-' + state);break;
+					}
 					$('#page-content .results-footer').html(html);
 				},
 
@@ -51,7 +58,7 @@
 
 			/*private data*/
 			
-			var gutter = 16;
+			var gutter = 15;
 			
 			var columnWidth = 0;
 			
@@ -73,7 +80,7 @@
 
 					// calculate widths
 
-					var width = $(grid).innerWidth(),
+					var width = $(grid).innerWidth() + gutter,
 					noOfColumns = Math.floor(width / 250);
 					
 					columnWidth = (width / noOfColumns) - gutter;
@@ -110,7 +117,7 @@
 
 					var html = '';
 					
-					for (var i=0;i<12;i++){
+					for (var i=0;i<2;i++){
 						var width = Math.floor(Math.random()*180) + 150,
 							height = Math.floor(Math.random()*250) + 200;
 						html += getdeals.template.render('product-card', {

@@ -1,0 +1,70 @@
+
+#page-header {
+	padding: 7rem 1rem 2rem;
+
+	@media #{$medium-and-up} {
+		padding: 7rem 1rem 4rem;
+	}
+
+	@media #{$large-and-up} {
+		padding: 12% 1rem 4rem;
+	}
+
+	.wrapper {
+		max-width: 698px;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.brand-logo {
+		margin-bottom: 1.25rem;
+
+		@media #{$medium-and-up} {
+			margin-bottom: 1.6rem;
+		}
+
+		img {
+			max-height: 6rem;
+			max-width: 60%;
+			vertical-align: middle;
+		}
+
+	}
+
+	.search-form {
+
+		.card {
+			margin: 0;
+			padding: .0625rem 1rem;
+			padding-right: 3.75rem;
+		}
+
+		input {
+			font-size: 1.125rem;
+			font-weight: 500;
+			border: none !important;
+			box-shadow: none !important;
+			margin-bottom: 0;
+		}
+
+		button {
+			color: color("grey", "base");
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding: 0 .98rem;
+			background: none;
+			border: none;
+
+			.fa-search {
+				font-size: 1.75rem;
+				position: relative;
+				top: 1.5px;
+			}
+
+		}
+
+	}
+
+}

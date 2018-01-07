@@ -1,0 +1,97 @@
+
+#page-content {
+	padding: 2rem 1rem 5rem;
+
+	.wrapper {
+		
+	}
+
+	.search-results {
+		padding-top: 1rem;
+		margin-bottom: 2rem;
+
+		.card {
+			margin: 0 0 16px;
+			float: left;
+		}
+
+		.card-image {
+			padding: 1rem;
+			padding-bottom: 0;
+		}
+
+		.card-content {
+			padding: 1rem;
+		}
+
+		.card-title {
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 1.5;
+			margin-bottom: 5px;
+		}
+
+		.card-price-info {
+			line-height: 1;
+			margin-bottom: 8px;
+
+			.list-price {
+				color: color("grey", "lighten-1");
+				text-decoration: line-through;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.sale-price {
+				//color: $primary-color;
+				font-size: 20px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.discount-badge {
+				color: #fff;
+				font-size: 12px;
+				line-height: 1;
+				padding: 3.5px 5px;
+				background: color("green", "base");
+				border-radius: 2px;
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 10px;
+			}
+
+		}
+
+		.card-action {
+			padding: 0;
+			border-top: none;
+			margin-left: -1px;
+			margin-right: -1px;
+
+			a {
+				color: #fff;
+				line-height: 1;
+				text-align: center;
+				padding: 15px;
+				background: $primary-color;
+				display: block;
+				margin: 0;
+			}
+
+		}
+
+	}
+
+	.results-footer {
+		text-align: center;
+		margin-top: 3rem;
+
+		button {
+			width: 100%;
+			max-width: 300px;	
+		}
+
+	}
+
+}
