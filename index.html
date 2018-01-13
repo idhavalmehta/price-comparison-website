@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>GetDeals</title>
+	<meta name="GD-API-Email" content="" />
+	<meta name="GD-API-Token" content="" />
+	<link type="text/css" href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<header id="page-header">
+
+	<div class="wrapper">
+		<div class="brand-logo">
+			<a href="." title="GetDeals">
+				<img src="assets/img/logo.png" alt="GetDeals" />
+			</a>
+		</div>
+		<div class="search-form">
+			<form name="search-form" id="search-form" class="card search-form">
+				<input type="search" name="q" placeholder="What are you looking for?" form="search-form" required="required" />
+				<input type="hidden" name="category" value="all" form="filter-category" />
+				<input type="hidden" name="page" value="1" form="pagination" />
+				<button type="submit"><i class="fas fa-search"></i></button>
+			</form>
+		</div>
+	</div>
+
+</header>
+
+<main id="page-content">
+	
+	<section class="wrapper">
+		<div class="search-results"></div>
+		<div class="pagination"></div>
+	</section>
+
+</main>
+
+<footer id="page-footer">
+
+	<div class="wrapper">
+		<div class="footer-navbar">
+			<a href="https://getdeals.co.in">#PoweredByGetDeals</a>
+		</div>
+		<div class="social-networks">
+			<a href="https://www.facebook.com/getdealscoin" target="_blank"><i class="fab fa-facebook-square"></i></a>
+			<a href="https://www.twitter.com/getdealscoin" target="_blank"><i class="fab fa-twitter-square"></i></a>
+			<a href="https://www.linkedin.com/company/getdeals" target="_blank"><i class="fab fa-linkedin"></i></a>
+		</div>
+	</div>
+
+</footer>
+
+<script type="text/html" id="api-state-more">
+	<button id="load-more-btn" class="btn btn-large">Load More Results</button>
+</script>
+
+<script type="text/html" id="api-state-last">
+	<button class="btn btn-large" disabled>That's All We Could Find</button>
+</script>
+
+<script type="text/html" id="api-state-load">
+	<div class="preloader-wrapper active"><div class="spinner-layer">
+		<div class="circle-clipper left"><div class="circle"></div></div>
+		<div class="gap-patch"><div class="circle"></div></div>
+		<div class="circle-clipper right"><div class="circle"></div></div>
+	</div></div>
+</script>
+
+<script type="text/html" id="product-card">
+	{{#data}}
+	<div class="card product-card">
+		<div class="card-image">
+			<img src="{{image}}" alt="{{title}}" />
+		</div>
+		<div class="card-content">
+			<span class="card-title">{{title}}</span>
+			<p class="card-store">{{store}}</p>
+		</div>
+		{{#price}}
+		<div class="card-content">
+			{{#mrp}}
+			<p class="card-price-info">
+				<span class="list-price">&#8377;{{mrp}}</span>
+				<span class="discount-badge">{{discount}}% OFF</span>
+			</p>
+			{{/mrp}}
+			{{#sale}}
+			<p class="card-price-info">
+				<span class="sale-price">&#8377;{{sale}}</span>
+			</p>
+			{{/sale}}
+		</div>
+		{{/price}}
+		<div class="card-action">
+			<a href="{{link}}" target="_blank">Buy Now</a>
+		</div>
+	</div>
+	{{/data}}
+</script>
+
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/materialize.js"></script>
+<script type="text/javascript" src="assets/js/mustache.js"></script>
+<script type="text/javascript" src="assets/js/unserialize.js"></script>
+<script type="text/javascript" src="assets/js/masonry.js"></script>
+<script type="text/javascript" src="assets/js/imagesloaded.js"></script>
+<script type="text/javascript" src="assets/js/trunk8.js"></script>
+<script type="text/javascript" src="assets/js/getdeals.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+
+<!-- Insert Google Analytics Code Here -->
+
+</body>
+
+</html>
