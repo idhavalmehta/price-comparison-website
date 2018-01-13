@@ -7,22 +7,19 @@
 
 			/*private data*/
 
-			var forms = [
-				'[form="search-form"]', // q
-				'[form="filter-category"]', // category
-				'[form="pagination"]', // page
-			];
+			var data = {
 
-			var headers = {
-				'GD-API-Email': $('meta[name="GD-API-Email"]').attr('content'),
-				'GD-API-Token': $('meta[name="GD-API-Token"]').attr('content'),
-			};
+				forms: [
+					'[form="search-form"]', // q
+					'[form="filter-category"]', // category
+					'[form="pagination"]', // page
+				],
 
-			/*private methods*/
+				serialize: function() {
+					var all = this.forms.join(',');
+					return $(all).serialize().replace(/&?[^=&]+=(&|$)/g,'');
+				},
 
-			var serialize = function() {
-				var all = forms.join(',');
-				return $(all).serialize().replace(/&?[^=&]+=(&|$)/g,'');
 			};
 
 			/*public data / methods*/
@@ -39,15 +36,35 @@
 						default:
 							var html = getdeals.template.render('api-state-' + state);break;
 					}
-					$('#page-content .results-footer').html(html);
+					if (html.length) {
+						html = '<div class="api-state">' + html + '</div>';
+					}
+					$('#page-content .pagination').html(html);
 				},
 
 				getResults: function() {
-					getdeals.results.append();
+					var request = $.ajax({
+						method: 'GET',
+						url: 'https://getdeals.co.in/api/v1/search',
+						data: data.serialize(),
+						headers: {
+							'GD-API-Email': $('meta[name="GD-API-Email"]').attr('content'),
+							'GD-API-Token': $('meta[name="GD-API-Token"]').attr('content'),
+						}, beforeSend: function() {
+							getdeals.api.state('load');
+						}, success: function(response) {
+							getdeals.results.append(response);
+						}, error: function() {
+							getdeals.api.state('error');
+						}
+					});
 				},
 
 				getNextPage: function() {
-					getdeals.results.append();
+					var $e = $('[name="page"]'),
+						page = parseInt($e.val()) + 1;
+					$e.val(page); // update search form
+					getdeals.api.getResults();
 				},
 
 			}
@@ -104,11 +121,8 @@
 
 				},
 
-				append: function() {
+				append: function(results) {
 
-					// remove when ajax added **
-					getdeals.api.state('load');
-					
 					// initialize masonry if needed
 					
 					if (!$masonry) { this.initMasonry(); }
@@ -116,13 +130,10 @@
 					// render search results in a variable
 
 					var html = '';
+					var noOfResults = results.length;
 					
-					for (var i=0;i<2;i++){
-						var width = Math.floor(Math.random()*180) + 150,
-							height = Math.floor(Math.random()*250) + 200;
-						html += getdeals.template.render('product-card', {
-							image: "https://picsum.photos/" + width + "/" + height + "/?random",
-						});
+					for (var i=0;i<noOfResults;i++){
+						html += getdeals.template.render('product-card', results[i]);
 					}
 
 					var $items = $(html); // convert to jQuery object
@@ -133,7 +144,9 @@
 						$masonry.append($items);
 						$items.find('.card-title').trunk8({lines:2});
 						$masonry.masonry('appended', $items).masonry();
-						getdeals.api.state('more');
+						if (noOfResults) { getdeals.api.state('more'); }
+						else if ($('.product-card').length) { getdeals.api.state('last'); }
+						else { getdeals.api.state('none'); } // no results found
 					} );
 					
 				},
@@ -195,7 +208,7 @@
 
 			return {
 
-				reInitialize: function() {
+				remake: function() {
 					getdeals.results.initMasonry();
 				},
 

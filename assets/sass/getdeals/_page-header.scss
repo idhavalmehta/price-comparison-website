@@ -1,13 +1,13 @@
 
 #page-header {
-	padding: 7rem 1rem 2rem;
+	padding: 8rem 1rem 4rem;
 
 	@media #{$medium-and-up} {
-		padding: 7rem 1rem 4rem;
+		
 	}
 
 	@media #{$large-and-up} {
-		padding: 12% 1rem 4rem;
+		padding: 25vh 1rem 6rem;
 	}
 
 	.wrapper {

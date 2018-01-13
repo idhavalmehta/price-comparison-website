@@ -1,6 +1,5 @@
 
 $(document).ready(function(){
-	$('.modal').modal(); // materializecss
 	var parameters = window.location.search;
 	parameters = $.unserialize(parameters.substring(1));
 	$('#search-form').unserialize(parameters); // update form values
@@ -9,7 +8,7 @@ $(document).ready(function(){
 });
 
 $(window).resize(function() {
-	getdeals.masonry.reInitialize();
+	getdeals.masonry.remake(); // create the masonry grid again
 } );
 
 $('#page-content').on('click', '#load-more-btn', function(e){

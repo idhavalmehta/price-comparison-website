@@ -7,118 +7,116 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>GetDeals</title>
-	<link type="text/css" href="assets/css/style.css" rel="stylesheet" />
 	<meta name="GD-API-Email" content="" />
 	<meta name="GD-API-Token" content="" />
+	<link type="text/css" href="assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
 
-	<header id="page-header">
+<header id="page-header">
 
-		<div class="wrapper">
-			<div class="brand-logo">
-				<a href="/" title="GetDeals"><img src="assets/img/logo.png" alt="GetDeals" /></a>
-			</div>
-			<div class="search-form">
-				<form name="search-form" id="search-form" class="card search-form">
-					<input type="search" name="q" placeholder="What are you looking for?" form="search-form" required="required" />
-					<input type="hidden" name="category" value="all" form="filter-category" />
-					<input type="hidden" name="page" value="1" form="pagination" />
-					<button type="submit"><i class="fas fa-search"></i></button>
-				</form>
-			</div>
+	<div class="wrapper">
+		<div class="brand-logo">
+			<a href="." title="GetDeals">
+				<img src="assets/img/logo.png" alt="GetDeals" />
+			</a>
 		</div>
-
-	</header>
-
-	<main id="page-content">
-		
-		<section id="index-page" class="wrapper">
-			<div class="results-header"></div>
-			<div class="search-results"></div>
-			<div class="results-footer"></div>
-		</section>
-
-		<section id="js-content" class="wrapper">
-			<div id="about-getdeals" class="modal modal-fixed-footer">
-				<div class="modal-content">
-					<h4>About GetDeals</h4>
-					<p>GetDeals is India's #1 open-source search engine and price comparison website for e-commerce.</p>
-					<p>With so many e-commerce websites already available and new ones coming up every now and then, how do you know that you are getting the best deal online? You don't visit every single one of those e-commerce websites, search for your product, note down the price and then decide where to buy from, right? That is so not smart!</p>
-					<p>Smart work is you searching for your product on GetDeals instead of visiting multiple e-commerce websites. GetDeals will, on your behalf, search get you the current price of your product from all major e-commerce websites like Amazon.in, Flipkart and Snapdeal for easy comparison within seconds. And the best part, it works for all products and all categories making our product catalogue the largest of all price comparison websites out there.</p>
-					<p>By using GetDeals everytime you shop online, you not only save both time and moeny, but are sure that you have got the best deal online as well.</p>
-				</div>
-				<div class="modal-footer">
-					<button class="modal-action modal-close btn-flat">Close</button>
-				</div>
-			</div>
-		</section>
-
-	</main>
-
-	<footer id="page-footer">
-
-		<div class="wrapper">
-			<div class="footer-navbar">
-				<a href="#about-getdeals" class="modal-trigger">About GetDeals</a>
-				<span class="separator">&bull;</span>
-				<a href="privacy">Privacy Policy</a>
-				<a href="terms">Terms of Service</a>
-			</div>
-			<div class="social-networks">
-				<a href="https://www.facebook.com/getdealscoin" target="_blank"><i class="fab fa-facebook-square"></i></a>
-				<a href="https://www.twitter.com/getdealscoin" target="_blank"><i class="fab fa-twitter-square"></i></a>
-				<a href="https://www.linkedin.com/company/getdeals" target="_blank"><i class="fab fa-linkedin"></i></a>
-			</div>
+		<div class="search-form">
+			<form name="search-form" id="search-form" class="card search-form">
+				<input type="search" name="q" placeholder="What are you looking for?" form="search-form" required="required" />
+				<input type="hidden" name="category" value="all" form="filter-category" />
+				<input type="hidden" name="page" value="1" form="pagination" />
+				<button type="submit"><i class="fas fa-search"></i></button>
+			</form>
 		</div>
+	</div>
 
-	</footer>
+</header>
 
-	<script type="text/html" id="api-state-more">
-		<button id="load-more-btn" class="btn btn-large">Load More Results</button>
-	</script>
+<main id="page-content">
+	
+	<section class="wrapper">
+		<div class="search-results"></div>
+		<div class="pagination"></div>
+	</section>
 
-	<script type="text/html" id="api-state-last">
-		<button class="btn" disabled>That's All We Could Find</button>
-	</script>
+</main>
 
-	<script type="text/html" id="api-state-load">
-		<div class="preloader-wrapper active"><div class="spinner-layer">
-			<div class="circle-clipper left"><div class="circle"></div></div>
-			<div class="gap-patch"><div class="circle"></div></div>
-			<div class="circle-clipper right"><div class="circle"></div></div>
-		</div></div>
-	</script>
+<footer id="page-footer">
 
-	<script type="text/html" id="product-card">
-		<div class="card product-card">
-			<div class="card-image">
-				<img src="{{image}}" alt="" />
-			</div>
-			<div class="card-content">
-				<span class="card-title">Here Comes The Name Of The Best Product In The World</span>
-				<p class="card-store">Store Name</p>
-			</div>
-			<div class="card-content">
-				<p class="card-price-info"><span class="list-price">&#8377;102000.00</span><span class="discount-badge">10% OFF</span></p>
-				<p class="card-price-info"><span class="sale-price">&#8377;90000.00</span></p>
-			</div>
-			<div class="card-action">
-				<a href="#">Buy Now</a>
-			</div>
+	<div class="wrapper">
+		<div class="footer-navbar">
+			<a href="https://getdeals.co.in">#PoweredByGetDeals</a>
 		</div>
-	</script>
+		<div class="social-networks">
+			<a href="https://www.facebook.com/getdealscoin" target="_blank"><i class="fab fa-facebook-square"></i></a>
+			<a href="https://www.twitter.com/getdealscoin" target="_blank"><i class="fab fa-twitter-square"></i></a>
+			<a href="https://www.linkedin.com/company/getdeals" target="_blank"><i class="fab fa-linkedin"></i></a>
+		</div>
+	</div>
 
-	<script type="text/javascript" src="assets/js/jquery.js"></script>
-	<script type="text/javascript" src="assets/js/materialize.js"></script>
-	<script type="text/javascript" src="assets/js/mustache.js"></script>
-	<script type="text/javascript" src="assets/js/unserialize.js"></script>
-	<script type="text/javascript" src="assets/js/masonry.js"></script>
-	<script type="text/javascript" src="assets/js/imagesloaded.js"></script>
-	<script type="text/javascript" src="assets/js/trunk8.js"></script>
-	<script type="text/javascript" src="assets/js/getdeals.js"></script>
-	<script type="text/javascript" src="assets/js/script.js"></script>
+</footer>
+
+<script type="text/html" id="api-state-more">
+	<button id="load-more-btn" class="btn btn-large">Load More Results</button>
+</script>
+
+<script type="text/html" id="api-state-last">
+	<button class="btn btn-large" disabled>That's All We Could Find</button>
+</script>
+
+<script type="text/html" id="api-state-load">
+	<div class="preloader-wrapper active"><div class="spinner-layer">
+		<div class="circle-clipper left"><div class="circle"></div></div>
+		<div class="gap-patch"><div class="circle"></div></div>
+		<div class="circle-clipper right"><div class="circle"></div></div>
+	</div></div>
+</script>
+
+<script type="text/html" id="product-card">
+	{{#data}}
+	<div class="card product-card">
+		<div class="card-image">
+			<img src="{{image}}" alt="{{title}}" />
+		</div>
+		<div class="card-content">
+			<span class="card-title">{{title}}</span>
+			<p class="card-store">{{store}}</p>
+		</div>
+		{{#price}}
+		<div class="card-content">
+			{{#mrp}}
+			<p class="card-price-info">
+				<span class="list-price">&#8377;{{mrp}}</span>
+				<span class="discount-badge">{{discount}}% OFF</span>
+			</p>
+			{{/mrp}}
+			{{#sale}}
+			<p class="card-price-info">
+				<span class="sale-price">&#8377;{{sale}}</span>
+			</p>
+			{{/sale}}
+		</div>
+		{{/price}}
+		<div class="card-action">
+			<a href="{{link}}" target="_blank">Buy Now</a>
+		</div>
+	</div>
+	{{/data}}
+</script>
+
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/materialize.js"></script>
+<script type="text/javascript" src="assets/js/mustache.js"></script>
+<script type="text/javascript" src="assets/js/unserialize.js"></script>
+<script type="text/javascript" src="assets/js/masonry.js"></script>
+<script type="text/javascript" src="assets/js/imagesloaded.js"></script>
+<script type="text/javascript" src="assets/js/trunk8.js"></script>
+<script type="text/javascript" src="assets/js/getdeals.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+
+<!-- Insert Google Analytics Code Here -->
 
 </body>
 
