@@ -9352,9 +9352,6 @@ body {
 
 #page-content {
   padding: 1rem 1rem 7rem; }
-  @media only screen and (min-width: 993px) {
-    #page-content {
-      padding: 1rem 1rem 10vh; } }
   #page-content .search-results .card {
     margin: 0 0 16px;
     float: left; }
@@ -9437,9 +9434,6 @@ body {
     display: inline-block;
     vertical-align: middle;
     margin-top: .6rem; }
-    @media only screen and (min-width: 601px) {
-      #page-footer .footer-navbar {
-        margin-top: .85rem; } }
     #page-footer .footer-navbar a {
       color: #9e9e9e;
       font-weight: 500;
