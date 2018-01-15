@@ -3,7 +3,7 @@ Overview
 
 **GetDeals** is India's #1 free and open-source search engine and price comparison website for e-commerce. See it in action at [https://getdeals.co.in](https://getdeals.co.in).
 
-This is a slightly modified version of GetDeals frontend. It was created specifically so that it can be hosted anywhere; or integrated with any existing CMS or website. 
+This is a slightly modified version of **GetDeals** frontend. It was created specifically so that it can be hosted anywhere; or integrated with any existing CMS or website. 
 
 Instructions
 ===
@@ -29,7 +29,7 @@ This website, just like our own website is powered by the **GetDeals API** and i
 You will need a verified GitHub account for this step. If you don't have a GitHub account, it's highly recommended that you sign up for one now. We are going to use this account in the following steps.
 
 1\. Log in to **GetDeals** using your GitHub credentials: [Log In](https://getdeals.co.in/application)\
-2\. Fill up the application form and generate your GetDeals API token: [Application form](https://getdeals.co.in/application)
+2\. Fill up the application form and generate your **GetDeals API** token: [Application Form](https://getdeals.co.in/application)
 
 Well, that's it. Note down your credentials and bookmark the application page for future reference. 
 
