@@ -48,8 +48,8 @@
 						url: 'https://getdeals.co.in/api/v1/search',
 						data: data.serialize(),
 						headers: {
-							'GD-API-Email': $('meta[name="GD-API-Email"]').attr('content'),
-							'GD-API-Token': $('meta[name="GD-API-Token"]').attr('content'),
+							'GD-API-Email': w.GD_API_Email,
+							'GD-API-Token': w.GD_API_Token,
 						}, beforeSend: function() {
 							getdeals.api.state('load');
 						}, success: function(response) {
@@ -219,3 +219,20 @@
 	};
 
 })(jQuery, window);
+
+$(document).ready(function(){
+	var parameters = window.location.search;
+	parameters = $.unserialize(parameters.substring(1));
+	$('#search-form').unserialize(parameters); // update form values
+	getdeals.templates.parseAll(); // makes mustache faster
+	if (parameters.q) { getdeals.api.getResults(); }
+});
+
+$(window).resize(function() {
+	getdeals.masonry.remake(); // create the masonry grid again
+} );
+
+$('#page-content').on('click', '#load-more-btn', function(e){
+	getdeals.api.state('load');
+	getdeals.api.getNextPage();
+});
