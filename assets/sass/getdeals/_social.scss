@@ -1,0 +1,77 @@
+
+.btn-facebook {
+	$color: #3b5998;
+	$background: $color;
+	$border: $background;
+	@include button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%))
+}
+
+.btn-twitter {
+	$color: #1da1f2;
+	$background: $color;
+	$border: $background;
+	@include button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%))
+}
+
+.btn-linkedin {
+	$color: #0077b5;
+	$background: $color;
+	$border: $background;
+	@include button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%))
+}
+
+.btn-instagram {
+	$color: #c13584;
+	$background: $color;
+	$border: $background;
+	@include button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%))
+}
+
+.btn-youtube {
+	$color: #ff0000;
+	$background: $color;
+	$border: $background;
+	@include button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%))
+}
+
+.btn-google-plus {
+	$color: #dd4b39;
+	$background: $color;
+	$border: $background;
+	@include button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%))
+}
+
+.btn-snapchat {
+	$color: #fffc00;
+	$background: $color;
+	$border: $background;
+	@include button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%))
+}
+
+.btn-pinterest {
+	$color: #bd081c;
+	$background: $color;
+	$border: $background;
+	@include button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%))
+}
+
+.btn-tumblr {
+	$color: #35465c;
+	$background: $color;
+	$border: $background;
+	@include button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%))
+}
+
+.btn-github {
+	$color: #333333;
+	$background: $color;
+	$border: $background;
+	@include button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%))
+}
+
+.btn-whatsapp {
+	$color: #25d366;
+	$background: $color;
+	$border: $background;
+	@include button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%))
+}

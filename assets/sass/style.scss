@@ -1,16 +1,61 @@
 
-// materialize
-@import "materialize/materialize";
+// functions
+
+@import "bootstrap/functions";
+
+// variables
+
+@import "getdeals/variables";
+@import "bootstrap/variables";
+
+// bootstrap
+
+@import "bootstrap/mixins";
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/card";
+@import "bootstrap/breadcrumb";
+@import "bootstrap/pagination";
+@import "bootstrap/badge";
+@import "bootstrap/jumbotron";
+@import "bootstrap/alert";
+@import "bootstrap/progress";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/close";
+@import "bootstrap/modal";
+@import "bootstrap/tooltip";
+@import "bootstrap/popover";
+@import "bootstrap/carousel";
+@import "bootstrap/utilities";
+@import "bootstrap/print";
 
 // fontawesome
+
 @import "fontawesome/fontawesome";
 @import "fontawesome/fa-solid";
 @import "fontawesome/fa-regular";
 @import "fontawesome/fa-brands";
 
-// custom & overrides
+// getdeals
 
-@import "getdeals/global";
-@import "getdeals/page-header";
-@import "getdeals/page-content";
-@import "getdeals/page-footer";
+@import "getdeals/roboto";
+@import "getdeals/shadows";
+@import "getdeals/loader";
+@import "getdeals/social";
+
+@import "getdeals/stylesheet";

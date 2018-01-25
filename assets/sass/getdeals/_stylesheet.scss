@@ -1,0 +1,246 @@
+
+html {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	overflow-y: scroll;
+}
+
+#gd-app {
+	margin-bottom: 4rem;
+	overflow: auto;
+}
+
+#gd-brand {
+	text-align: center;
+	padding-top: 25vh;
+	padding-bottom: $spacer * 1.25;
+
+	img {
+		max-width: 52%;
+		max-height: 90px;
+
+		@include media-breakpoint-up(md) {
+			max-width: 65%;
+		}
+
+	}
+
+}
+
+#gd-search {
+
+}
+
+#gd-search-form {
+	padding-top: $spacer * 0;
+	padding-bottom: 20vh;
+
+	.input-group {
+		border-radius: $border-radius;
+		box-shadow: $bmd-shadow-2dp;
+
+		.form-control {
+			font-size: 1.15rem;
+			line-height: $font-size-lg * $input-line-height-lg;
+			border-color: $input-bg;
+			box-shadow: none !important;
+		}
+
+		.btn-search {
+			background-color: $input-bg;
+			box-shadow: none !important;
+		}
+
+	}
+
+}
+
+#gd-search-results {
+	padding: $spacer * .5;
+	padding-bottom: $spacer * .5;
+
+	&:empty {
+		padding-top: $spacer * 0;
+		padding-bottom: $spacer * 0;
+
+		+ #gd-search-footer .gd-api-status {
+			padding-bottom: 25vh;
+		}
+
+	}
+
+	.result {
+		padding: $spacer * .5;
+
+		.content {
+			background: $white;
+			border-radius: $border-radius;
+			box-shadow: $bmd-shadow-2dp;
+			overflow: auto;
+		}
+
+		$image-height: 10rem;
+
+		$title-font-size: $font-size-base * 1.15;
+		$title-line-height: $title-font-size * $line-height-base;
+		$title-margin-bottom: $spacer * .25;
+
+		$store-font-size: $font-size-base * 1;
+		$store-line-height: $store-font-size * $line-height-base;
+		$store-margin-bottom: $spacer * 0;
+
+		$old-price-font-size: $font-size-base * 1.15;
+		$old-price-line-height: $old-price-font-size * $line-height-base;
+		$old-price-margin-bottom: $spacer * 0;
+
+		// $new-price-font-size: $font-size-base * 1.25;
+		// $new-price-line-height: $new-price-font-size * $line-height-base;
+		$new-price-font-size: $font-size-base * 1.15;
+		$new-price-line-height: $new-price-font-size * $line-height-base;
+		$new-price-margin-bottom: $spacer * 0;
+
+		// section heights
+
+		.image {
+			height: $image-height;
+			padding-left: $spacer;
+			padding-right: $spacer;
+			margin-top: $spacer;
+			display: flex;
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				margin: auto;
+			}
+
+		}
+
+		.basic {
+			height: ($title-line-height * 2) + $title-margin-bottom + ($store-line-height) + $store-margin-bottom;
+			padding-left: $spacer;
+			padding-right: $spacer;
+			margin-top: $spacer;
+
+			.title {
+				font-size: $title-font-size;
+				font-weight: $font-weight-bold;
+				line-height: $title-line-height;
+				margin-bottom: $title-margin-bottom;
+			}
+
+			.store {
+				font-size: $store-font-size;
+				line-height: $store-line-height;
+				margin-bottom: $store-margin-bottom;
+			}
+
+		}
+
+		.prices {
+			//height: ($old-price-line-height) + ($new-price-line-height) + $old-price-margin-bottom;
+			height: ($old-price-line-height) + $old-price-margin-bottom;
+			padding-left: $spacer;
+			padding-right: $spacer;
+			margin-top: $spacer;
+
+			.value {
+				display: inline-block;
+			}
+
+			.old-price .value {
+				font-size: $old-price-font-size;
+				line-height: $old-price-line-height;
+				margin-bottom: $old-price-margin-bottom;
+			}
+
+			.new-price .value {
+				font-size: $new-price-font-size;
+				font-weight: $font-weight-bold;
+				line-height: $new-price-line-height;
+				margin-bottom: $new-price-margin-bottom;
+			}
+
+		}
+
+		.action {
+			padding-left: $spacer * .95;
+			padding-right: $spacer * .95;
+			padding-bottom: $spacer * .95;
+			margin-top: $spacer * 1.125;
+
+			.btn {
+				font-size: .95rem;
+			}
+
+		}
+
+	}
+
+}
+
+#gd-search-footer {
+	max-width: 27rem;
+	text-align: center;
+	padding-top: $spacer * 0;
+	padding-bottom: $spacer * 0;
+
+	.gd-api-status {
+		padding-top: $spacer * 0;
+		padding-bottom: $spacer * 1;
+
+		@include media-breakpoint-up(md) {
+			padding-top: $spacer * 2;
+			padding-bottom: $spacer * 3;
+		}
+
+	}
+
+}
+
+#gd-about {
+
+}
+
+#gd-about-header {
+	text-align: center;
+	padding-top: $spacer * 0;
+	padding-bottom: 25vh;
+
+	p.lead {
+		font-size: $h4-font-size;
+
+		@include media-breakpoint-up(lg) {
+			// padding-left: $spacer * 3.5;
+			// padding-right: $spacer * 3.5;
+		}
+
+	}
+
+}
+
+#gd-about-features {
+
+	.media-body {
+		max-width: 40rem;
+	}
+
+}
+
+#footer {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	border-top: 1px solid $gray-300;
+
+	a.footer-link {
+		color: $gray-600;
+		font-weight: 500;
+		margin-right: $spacer * .75;
+	}
+
+}
